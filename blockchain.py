@@ -52,7 +52,7 @@ for b in range(len(coin.chain)):
 	print('')
 
 # Tamper with the Blockchain
-coin.chain[2].data = 'amount: 3000'
+coin.chain[2].data = 'Satoshi sent 50000 coins to Mo'
 coin.chain[2].hash = coin.chain[2].calculateHash()
 
 # Check validity of Blockchain after tampering

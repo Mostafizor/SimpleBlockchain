@@ -10,10 +10,10 @@ class Block(object):
 		self.hash = self.calculateHash()
 
 	def calculateHash(self):
-		return hs.sha256(str(self.index) + str(self.timestamp) + str(self.data) + str(self.previousHash)).hexdigest()
+		return hs.sha256(str(self.index) + str(self.timestamp) + str(self.data) + str(self.previousHash) + str(self.nonce)).hexdigest()
 							 
 	def mineBlock(self, difficulty):
-		print('Mining Block...')
+		print('Mining...')
 		while self.hash[0:difficulty] != ''.join(['0'] * difficulty):
 			self.nonce += 1
 			self.hash = self.calculateHash()

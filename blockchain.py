@@ -18,6 +18,7 @@ class Block(object):
 			self.nonce += 1
 			self.hash = self.calculateHash()
 		print('Block Mined: %s' %(self.hash))
+		print('Block Reward: 50 Coins')
 							
 class Blockchain(object):
 	def __init__(self):
@@ -48,9 +49,14 @@ class Blockchain(object):
 
 # Create Blocks(Transactions)
 coin = Blockchain()
-coin.addBlock(Block('1', '25/09/2017', 'Mo sent 5 coins to Satoshi'))
-coin.addBlock(Block('2', '25/09/2017', 'Satoshi sent 20 coins to Mo'))
-coin.addBlock(Block('3', '25/09/2017', 'Satoshi sent 2000 coins to Mo'))
+
+num_blocks = int(raw_input('How Many Blocks Would You Like to Mine? >'))
+for i in range(num_blocks/5):
+	coin.addBlock(Block('1', '25/09/2017', 'Mo sent 5 coins to Satoshi'))
+	coin.addBlock(Block('2', '25/09/2017', 'Satoshi sent 20 coins to Mo'))
+	coin.addBlock(Block('3', '25/09/2017', 'Satoshi sent 2000 coins to Mo'))
+	coin.addBlock(Block('4', '08/10/2017', 'Tohseef sent 5000 coins to Hammy'))
+	coin.addBlock(Block('5', '08/10/2017', 'Mo sent 10000 coins to Satoshi'))
 
 # Check if Blockchain is valid
 print('Is Chain Valid ?: %s' %(coin.isChainValid()))

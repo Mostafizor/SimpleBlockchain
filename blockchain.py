@@ -22,7 +22,7 @@ class Block(object):
 class Blockchain(object):
 	def __init__(self):
 		self.chain = [self.createGenesisBlock()]
-		self.difficulty = 5
+		self.difficulty = 4
 
 	def createGenesisBlock(self):
 		return Block('0', '25/09/2017', 'Genesis Block', '0')

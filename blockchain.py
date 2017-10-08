@@ -50,7 +50,7 @@ class Blockchain(object):
 # Create Blocks(Transactions)
 coin = Blockchain()
 
-num_blocks = int(raw_input('How Many Blocks Would You Like to Mine? >'))
+num_blocks = int(raw_input('How Many Blocks Would You Like to Mine? > '))
 for i in range(num_blocks/5):
 	coin.addBlock(Block('1', '25/09/2017', 'Mo sent 5 coins to Satoshi'))
 	coin.addBlock(Block('2', '25/09/2017', 'Satoshi sent 20 coins to Mo'))

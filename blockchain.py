@@ -54,7 +54,7 @@ class Blockchain(object):
 				return False
 		return True
 
-# Create Blocks
+# Create Blockchain
 coin = Blockchain()
 
 num_blocks = int(raw_input('How many blocks would you like to mine? > '))
